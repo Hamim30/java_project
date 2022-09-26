@@ -4,17 +4,17 @@ public class Digit_LeftToRight {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int number = scn.nextInt();
-        int new_number;
-        new_number = number;
+        int temp;
+        temp = number;
         int count =0;
-        while (number>0){
-            count+=1;
+        while (number!=0){
+            count++;
             number= number/10;
         }
-        while (new_number>0){
+        while (temp!=0){
             int power= (int) Math.pow(10,count-1);
-            int digit = new_number / power;
-            new_number = new_number%power;
+            int digit = temp/ power;
+            temp = temp%power;
             count--;
             System.out.println(digit);
 
